@@ -116,7 +116,7 @@ sort(table(my_third_vector), decreasing = T)
 # please write the code immediately down here (in the empty space) 
 # save the file, and then push to the GitHub repo 
 
-unlist(strsplit("aaaaaa", ""))
+strsplit("aaaaaa", "")
 
 
 ### Your Turn (3) - end

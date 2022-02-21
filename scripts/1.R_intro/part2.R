@@ -30,8 +30,9 @@ cat("The cat is on the table", file = "Cat.txt")
 # please write the code immediately down here (in the empty space) 
 # save the file, and then push to the GitHub repo 
 
-
-
+my_text_1 <- readLines("samples/Doyle_Study_1887.txt")
+my_text_1 <- paste(my_text_1, collapse = "\n")
+strsplit(my_text_1, " ")
 ### Your Turn (1) - end
 
 #### 2. Reading/writing tables
