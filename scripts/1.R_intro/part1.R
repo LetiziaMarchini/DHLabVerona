@@ -48,6 +48,8 @@ View(my_df)
 my_new_list <- list(my_df)
 my_new_list
 
+my_list1 <- list(author = c("Shakespeare", "Dante", "Cervantes", "Pynchon"), nationality = c("English", "Italian", "Spanish", "American"))
+View(my_list1)
 
 ### Your Turn (1) - end
 
@@ -87,7 +89,7 @@ my_df$nationality[which(my_df$author == "Dante")]
 # please write the code immediately down here (in the empty space) 
 # save the file, and then push to the GitHub repo 
 
-
+my_df$author[which(my_df$nationality == "Spanish")]
 
 ### Your Turn (2) - end
 
