@@ -21,7 +21,7 @@ my_first_vector <- c(1,2,3,4,5)
 my_first_vector
 
 # tip: you can get the same by writing
-my_first_vector <- 1:5
+my_first_ <- 1:5
 my_first_vector
 
 # vectors (of strings)
@@ -45,7 +45,8 @@ View(my_df)
 # create a new list with the same content of the dataframe (authors and nationalities)
 # please write the code immediately down here (in the empty space) 
 # save the file, and then push to the GitHub repo 
-
+my_new_list <- list(my_df)
+my_new_list
 
 
 ### Your Turn (1) - end
