@@ -31,6 +31,7 @@ cat("The cat is on the table", file = "Cat.txt")
 # save the file, and then push to the GitHub repo 
 
 my_text_1 <- readLines("samples/Doyle_Study_1887.txt")
+head(my_text_1)
 my_text_1 <- paste(my_text_1, collapse = "\n")
 strsplit(my_text_1, " ")
 ### Your Turn (1) - end
@@ -53,7 +54,9 @@ my_authors <- read.csv("samples/Authors.csv", row.names = 1)
 # please write the code immediately down here (in the empty space) 
 # save the file, and then push to the GitHub repo 
 
-
+my_authors <- read.csv("samples/other_authors.csv")
+View(my_authors)
+my_authors$author[which(my_authors$nationality == "Italian")]
 
 ### Your Turn (2) - end
 
@@ -139,10 +142,29 @@ View(my_df)
 
 ### Your Turn (3) - start
 
-# read the two .csv files in the "samples" folder using a loop like the one above 
-# please write the code immediately down here (in the empty space) 
-# save the file, and then push to the GitHub repo 
+my_files <- list.files(path = "samples", full.names = T, pattern = ".csv") 
+my_files
 
+# second, create an empty variable where to store the results
+my_texts <- list()
+
+# third, run loop on the files
+for(i in 1:length(my_files)){
+  
+  cat("reading", my_files[i], "...\n")
+  
+  my_text_tmp <- read.csv(my_files[i])
+  
+  my_texts[[i]] <- my_text_tmp
+  names(my_texts)[i] <- gsub(pattern = "samples/|.csv", replacement = "", my_files[i])
+  
+}
+
+my_texts
+
+# not ideal! ...but just for the visualization
+my_df <- as.data.frame(my_texts)
+View(my_df)
 
 
 ### Your Turn (3) - end
